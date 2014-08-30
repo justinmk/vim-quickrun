@@ -13,6 +13,7 @@ function! s:runner.run(commands, input, session)
     let [result, code] = s:execute(cmd, a:input)
     call a:session.output(result)
     if code != 0
+      call a:session.output("command: ".cmd)
       break
     endif
   endfor

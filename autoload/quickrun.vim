@@ -18,6 +18,14 @@ let g:quickrun#V = s:V
 lockvar! g:quickrun#V
 
 let s:is_win = s:V.Prelude.is_windows()
+" \ 'java': {
+" \   'exec': ['javac %o -d %s:p:h %s', '%c -cp %s:p:h %s:t:r %a'],
+" \   'hook/output_encode/encoding': '&termencoding',
+" \   'hook/sweep/files': '%S:p:r.class',
+" \   'tempfile': '%{fnamemodify(tempname(), ":p:h")}/QuickrunTemp.java',
+" \   'hook/eval/template':
+" \     'public class QuickrunTemp { public static void main(String[] args) { %S } }',
+" \ },
 
 " Default config.  " {{{1
 unlet! g:quickrun#default_config
